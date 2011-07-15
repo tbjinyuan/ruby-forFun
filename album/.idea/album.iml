@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="GemRequirementsHolder" version="2">
+    <requirement>
+      <requirement>
+        <dependency name="hpricot" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source manual="true" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="rio" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source manual="true" />
+    </requirement>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] hpricot (v0.8.2, C:/Ruby187/lib/ruby/gems/1.8/gems/hpricot-0.8.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rio (v0.4.2, C:/Ruby187/lib/ruby/gems/1.8/gems/rio-0.4.2)" level="application" />
+  </component>
+</module>
+

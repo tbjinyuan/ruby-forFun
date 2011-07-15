@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%= @album.name %> Photo Collection</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="/statics/javascripts/photoslider/photoslider.css"/>
+  <script type="text/javascript" src="/statics/javascripts/jquery.js"></script>
+  <script type="text/javascript" src="/statics/javascripts/photoslider/photoslider.js"></script>
+</head>
+<body>
+<h1 align="Center"><%= @album.name %> Photo Collection</h1>
+
+<div class="photoslider" id="default"></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        //change the 'baseURL' to reflect the host and or path to your images
+        FOTO.Slider.baseURL = '/statics/images/hp/';
+        FOTO.Slider.bucket = {
+            'default': {
+                <%@album.pictures.each do |pic| %>
+                <%=pic.id%>: {'thumb': '<%=pic.thumbnail%>', 'main': '<%=pic.origin%>'},
+                <%end%>
+                999999999: {}
+            }
+        };
+        FOTO.Slider.reload('default');
+        FOTO.Slider.enableSlideshow('default');
+    });
+</script>
+
+
+</body>
+</html>
